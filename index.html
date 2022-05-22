@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function BMI(){
+            var h=document.getElementById('h').value;
+            var w=document.getElementById('w').value;
+            var bmi= w/(h/100*h/100);
+            var bmio=(bmi.toFixed(2));
+            document.getElementById("result").innerHTML="your BMI is "+ bmio;
+      
+      
+      
+        }
+    </script>
+</head>
+<body>
+    
+
+    <div>
+        <h2> BMI calculator</h2>
+        <p class="text">Height </p>
+        <input type="text" id="h">
+        <p class="text">Weight </p>
+        <input type="text" id="w">
+        <p id="result"></p>
+        <button id="btn" onclick="BMI()">Calculate</button>
+         <p id="info">Please enter height[cm] and Weight[kg]        
+    </div>
+</body>
+</html>
